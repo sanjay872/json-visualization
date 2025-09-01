@@ -1,0 +1,21 @@
+.comp5{
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.comp5-title{
+    margin: 1rem 0rem;
+}
+
+.comp5-btn{
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    border-radius: 30%;
+    box-shadow: 0.2rem 0.1rem black;
+    cursor: pointer;
+}

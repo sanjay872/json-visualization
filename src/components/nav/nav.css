@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    gap: 4em;
+    padding: 1em;
+    margin-bottom: .5em;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 1px;
+}
+.navbar_item{
+    cursor: pointer;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+}

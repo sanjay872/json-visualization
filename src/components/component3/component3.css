@@ -1,0 +1,25 @@
+.sections{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    margin: 2rem;
+}
+
+[class*="sections_item"] {
+    width: 20rem;
+    height: 10rem;
+    background-color: gray;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sections_actions-next, .sections_actions-prev{
+    width: 10rem;
+    align-self: center;
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 20%;
+}

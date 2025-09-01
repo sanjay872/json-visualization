@@ -1,0 +1,12 @@
+.img_holder{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.img_holder img{
+    width: 40rem;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}

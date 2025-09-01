@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    gap:2rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    width: 100%;
+}
+.main_left{
+    display: flex;
+}
+.main_right{
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.highlight{
+    border: 1px solid white;
+}

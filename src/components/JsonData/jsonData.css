@@ -1,0 +1,135 @@
+
+
+/* Card container */
+.json-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  backdrop-filter: blur(6px);
+}
+
+/* Header row */
+.json-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* File input styling */
+.json-file {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.json-file input[type="file"] {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px dashed var(--border);
+  background: rgba(255,255,255,0.02);
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.json-file input[type="file"]:hover {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 6px var(--ring);
+  transform: translateY(-1px);
+}
+
+/* Tree container */
+.json-tree {
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  padding: 8px;
+  max-height: 70vh;            /* make the tree scroll if large */
+  overflow: auto;
+}
+
+/* Nice thin scrollbar */
+.json-tree::-webkit-scrollbar { width: 10px; height: 10px; }
+.json-tree::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+}
+.json-tree::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+/* ===== MUI Tree – class selectors ===== */
+/* Root tree view element */
+.json-tree .MuiTreeView-root {
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* Each tree item */
+.json-tree .MuiTreeItem-root {
+  position: relative;
+  border-radius: 8px;
+}
+
+/* Row content (click target)
+.json-tree .MuiTreeItem-content {
+  border-radius: 8px;
+  padding: 4px 6px;
+  margin: 2px 0;
+  transition: background 0.12s ease, box-shadow 0.12s ease, transform 0.12s ease, border-color 0.12s ease;
+} */
+
+/* Expand/collapse icon container */
+.json-tree .MuiTreeItem-iconContainer {
+  color: var(--muted);
+}
+
+/* Label text */
+.json-tree .MuiTreeItem-label {
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.2px;
+}
+
+/* Hover state */
+.json-tree .MuiTreeItem-content:hover {
+  background: rgba(124,58,237,0.12);  /* subtle purple wash */
+}
+
+/* Selected item */
+.json-tree .Mui-selected,
+.json-tree .Mui-selected.Mui-focused {
+  background: rgba(34,211,238,0.15) !important;   /* cyan wash */
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+/* Focus ring on keyboard nav */
+.json-tree .Mui-focused {
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+/* Children indentation connector group */
+.json-tree .MuiTreeItem-group {
+  margin-left: 14px;  
+  padding-left: 12px;
+  border-left: 1px dashed rgba(255,255,255,0.12);
+}
+
+/* Make circular markers stand out */
+.json-tree .MuiTreeItem-label:has(> span:contains("[Circular]")),
+.json-tree .MuiTreeItem-label:has(> *:contains("[Circular]")) {
+  color: #fca5a5; /* soft red */
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .json-card { padding: 14px; }
+  .json-header { flex-direction: column; align-items: stretch; }
+}

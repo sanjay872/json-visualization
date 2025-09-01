@@ -1,0 +1,13 @@
+.nav_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_items-item button{
+    width: 100%;
+    padding: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
